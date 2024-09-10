@@ -75,7 +75,7 @@ class DeliveryTest {
         $("[data-test-id='city'] input").setValue(validUser.getCity());
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id='date'] input").setValue(firstMeetingDate);
-        $("[data-test-id='mane'] input").setValue(validUser.getName());
+        $("[data-test-id='name'] input").setValue(validUser.getName());
         $("[data-test-id='phone'] input").setValue(DataGenerator.generateWrongPhone("en"));
         $("[data-test-id='agreement']").click();
         $(byText("Запланировать")).click();
@@ -85,3 +85,7 @@ class DeliveryTest {
 
 
 }
+
+// java -jar ./artifacts/app-replan-delivery.jar
+// ./gradlew clean test --info
+// ./gradlew allureserve
